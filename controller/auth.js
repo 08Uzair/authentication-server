@@ -62,17 +62,17 @@ export const signup = async (req, res) => {
 
 // //  GET AUTHOR BY ID
 
-// export const getAuthorById = async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const user = await author.findById(id);
+export const getAuthorById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const user = await auth.findById(id);
 
-//     res.status(200).json(user);
-//   } catch (error) {
-//     error;
-//     res.status(500).json({ message: "Internal Server Error" });
-//   }
-// };
+    res.status(200).json(user);
+  } catch (error) {
+    error;
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 
 // // GET ALL AUTHORS
 
