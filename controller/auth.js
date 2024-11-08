@@ -76,12 +76,12 @@ export const signup = async (req, res) => {
 
 // // GET ALL AUTHORS
 
-// export const getAuthor = async (req, res) => {
-//   try {
-//     const user = await author.find();
-//     res.status(200).json({ user });
-//   } catch (error) {
-//     console.log(error);
-//     res.status(500).json({ message: "failed" });
-//   }
-// };
+export const getAuthor = async (req, res) => {
+  try {
+    const user = await auth.find();
+    res.status(200).json({ user });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "failed" });
+  }
+};
